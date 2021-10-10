@@ -2,10 +2,10 @@
 
 ## How I use this repo
 
-This repo is for tracking bootloadders using on my hackintosh machine included: binaries, kexts, config.plist.
+This repo is for versioning bootloader in my hackintosh machine included: binaries, kexts, config.plist.
 
 - Issues relating to macOS, OpenCore: [Issues](https://github.com/tuanht/hackintosh-10600k-z490-aorus-elite-5700xt/issues)
-- Taking knowledge: [Wiki](https://github.com/tuanht/hackintosh-10600k-z490-aorus-elite-5700xt/wiki)
+- Knowledge: [Wiki](https://github.com/tuanht/hackintosh-10600k-z490-aorus-elite-5700xt/wiki)
 
 ## Hardware specs
 
