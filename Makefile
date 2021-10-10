@@ -8,7 +8,7 @@ version_whatevergreen 	= 1.5.4
 version_applealc 		= 1.6.5
 version_nvmefix 		= 1.0.9
 
-base: clean
+base: clean_all
 	curl -o $(tmp_dir)/OpenCore.zip -L "https://github.com/acidanthera/OpenCorePkg/releases/download/$(version_opencore)/OpenCore-$(version_opencore)-RELEASE.zip"
 	cd $(tmp_dir) && mkdir OpenCore && unzip OpenCore.zip -d OpenCore
 	cp -r $(tmp_dir)/OpenCore/X64/EFI/BOOT EFI/
@@ -33,5 +33,7 @@ gathering_files:
 
 clean:
 	ls -rtd $(tmp_dir)/* | grep -vw -E '.gitkeep' | xargs rm -rf
+
+clean_all: clean
 	rm -rf EFI/BOOT
 	ls -rtd EFI/OC/* | grep -vw -E 'config.plist' | xargs rm -rf
