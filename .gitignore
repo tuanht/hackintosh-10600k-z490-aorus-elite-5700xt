@@ -1,4 +1,5 @@
-EFI/OC/Drivers/HfsPlus.efi
-tmp
-!EFI/OC/Kexts/.gitkeep
-EFI/OC/Kexts/
+EFI/BOOT
+EFI/OC
+!EFI/OC/config.plist
+!.tmp/.gitkeep
+.tmp
