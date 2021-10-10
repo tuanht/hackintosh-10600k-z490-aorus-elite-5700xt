@@ -1,12 +1,12 @@
 tmp_dir = .tmp
 drivers = OpenRuntime.efi|OpenCanopy.efi
 tools = OpenShell.efi
-version_opencore 		= 0.7.4
-version_virtualsmc		= 1.2.7
-version_lilu 			= 1.5.6
-version_whatevergreen 	= 1.5.4
-version_applealc 		= 1.6.5
-version_nvmefix 		= 1.0.9
+version_opencore = 0.7.4
+version_virtualsmc = 1.2.7
+version_lilu = 1.5.6
+version_whatevergreen = 1.5.4
+version_applealc = 1.6.5
+version_nvmefix = 1.0.9
 
 base: clean_all
 	curl -o $(tmp_dir)/OpenCore.zip -L "https://github.com/acidanthera/OpenCorePkg/releases/download/$(version_opencore)/OpenCore-$(version_opencore)-RELEASE.zip"
