@@ -9,5 +9,9 @@ This repo is for versioning bootloader in my hackintosh machine included: binari
 
 ## Hardware specs
 
+- Intel Core i5 10600k
+- Gigabyte Z490 Aorus Elite
 - Gigabyte Aorus Radeon RX 5700XT 8G
 - WD_BLACK SN750 NVMe SSD 512GB
+- Audio Realtek ALC1200 codec
+- LAN Realtek 2.5GbE. Intel's I225-V NICs.
