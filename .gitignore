@@ -1,5 +1,5 @@
-EFI/BOOT
-EFI/OC
+EFI/BOOT/*
+EFI/OC/*
 !EFI/OC/config.plist
 !tmp/.gitkeep
 tmp

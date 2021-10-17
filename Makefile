@@ -1,8 +1,10 @@
 tmp_dir = tmp
 kext_dir = EFI/OC/Kexts
 acpi_dir = EFI/OC/ACPI
+
 drivers = OpenRuntime.efi|OpenCanopy.efi
 tools = OpenShell.efi
+
 version_opencore = 0.7.4
 version_virtualsmc = 1.2.7
 version_lilu = 1.5.6
@@ -10,9 +12,11 @@ version_whatevergreen = 1.5.4
 version_applealc = 1.6.5
 version_nvmefix = 1.0.9
 
-base: clean_all
+download_oc:
 	curl -o $(tmp_dir)/OpenCore.zip -L "https://github.com/acidanthera/OpenCorePkg/releases/download/$(version_opencore)/OpenCore-$(version_opencore)-RELEASE.zip"
 	cd $(tmp_dir) && mkdir OpenCore && unzip OpenCore.zip -d OpenCore
+
+base: clean_all download_oc
 	cp -r $(tmp_dir)/OpenCore/X64/EFI/BOOT EFI/
 	cp -r $(tmp_dir)/OpenCore/X64/EFI/OC/* EFI/OC/
 	ls -rtd EFI/OC/Drivers/* | grep -vw -E '$(drivers)' | xargs rm
@@ -42,8 +46,9 @@ gathering_files: clean
 	cp $(tmp_dir)/*.aml $(acpi_dir)/
 
 clean:
-	ls -rtd $(tmp_dir)/* | grep -vw -E '.gitkeep' | xargs rm -rf
+	ls -rtd $(tmp_dir)/* | grep -vw -E '.gitkeep|OpenCore' | xargs rm -rf
 
 clean_all: clean
+	rm -rf $(tmp_dir)/OpenCore
 	rm -rf EFI/BOOT
 	ls -rtd EFI/OC/* | grep -vw -E 'config.plist' | xargs rm -rf
