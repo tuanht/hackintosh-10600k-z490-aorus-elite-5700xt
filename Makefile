@@ -23,7 +23,7 @@ base: clean_base download_oc
 	ls -rtd EFI/OC/Tools/* | grep -vw -E '$(tools)' | xargs rm
 
 gathering_files: clean
-	curl -o EFI/OC/Drivers/HfsPlus.efi "https://github.com/acidanthera/OcBinaryData/raw/master/Drivers/HfsPlus.efi"
+	curl -o EFI/OC/Drivers/HfsPlus.efi -L "https://github.com/acidanthera/OcBinaryData/raw/master/Drivers/HfsPlus.efi"
 	cd $(tmp_dir) && curl -o VirtualSMC.zip -L "https://github.com/acidanthera/VirtualSMC/releases/download/$(version_virtualsmc)/VirtualSMC-$(version_virtualsmc)-RELEASE.zip" && mkdir VirtualSMC && unzip VirtualSMC.zip -d VirtualSMC
 	cd $(tmp_dir) && curl -o Lilu.zip -L "https://github.com/acidanthera/Lilu/releases/download/$(version_lilu)/Lilu-$(version_lilu)-RELEASE.zip" && mkdir Lilu && unzip Lilu.zip -d Lilu
 	cd $(tmp_dir) && curl -o WhateverGreen.zip -L "https://github.com/acidanthera/WhateverGreen/releases/download/$(version_whatevergreen)/WhateverGreen-$(version_whatevergreen)-RELEASE.zip" && mkdir WhateverGreen && unzip WhateverGreen.zip -d WhateverGreen
