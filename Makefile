@@ -16,7 +16,7 @@ download_oc:
 	curl -o $(tmp_dir)/OpenCore.zip -L "https://github.com/acidanthera/OpenCorePkg/releases/download/$(version_opencore)/OpenCore-$(version_opencore)-RELEASE.zip"
 	cd $(tmp_dir) && mkdir OpenCore && unzip OpenCore.zip -d OpenCore
 
-base: clean_all download_oc
+base: clean_base download_oc
 	cp -r $(tmp_dir)/OpenCore/X64/EFI/BOOT EFI/
 	cp -r $(tmp_dir)/OpenCore/X64/EFI/OC/* EFI/OC/
 	ls -rtd EFI/OC/Drivers/* | grep -vw -E '$(drivers)' | xargs rm
@@ -48,7 +48,7 @@ gathering_files: clean
 clean:
 	ls -rtd $(tmp_dir)/* | grep -vw -E '.gitkeep|OpenCore' | xargs rm -rf
 
-clean_all: clean
+clean_base: clean
 	rm -rf $(tmp_dir)/OpenCore
 	rm -rf EFI/BOOT
 	ls -rtd EFI/OC/* | grep -vw -E 'config.plist' | xargs rm -rf
