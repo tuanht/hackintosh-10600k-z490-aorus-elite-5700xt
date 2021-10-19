@@ -50,12 +50,14 @@
 				<dict>
 					<key>HS01</key>
 					<dict>
-						<key>#port</key>
+						<key>Comment</key>
+						<string>F_U32C_20</string>
+						<key>UsbConnector</key>
+						<integer>10</integer>
+						<key>port</key>
 						<data>
 						AQAAAA==
 						</data>
-						<key>UsbConnector</key>
-						<integer>3</integer>
 					</dict>
 					<key>HS02</key>
 					<dict>
@@ -163,7 +165,7 @@
 						<key>Comment</key>
 						<string>F_USB1</string>
 						<key>UsbConnector</key>
-						<integer>255</integer>
+						<integer>0</integer>
 						<key>port</key>
 						<data>
 						DQAAAA==
