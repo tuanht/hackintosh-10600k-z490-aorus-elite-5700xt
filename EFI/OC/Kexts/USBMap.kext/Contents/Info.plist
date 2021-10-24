@@ -70,21 +70,25 @@
 					</dict>
 					<key>HS03</key>
 					<dict>
-						<key>#port</key>
+						<key>Comment</key>
+						<string>U32_20</string>
+						<key>UsbConnector</key>
+						<integer>0</integer>
+						<key>port</key>
 						<data>
 						AwAAAA==
 						</data>
-						<key>UsbConnector</key>
-						<integer>0</integer>
 					</dict>
 					<key>HS04</key>
 					<dict>
-						<key>#port</key>
+						<key>Comment</key>
+						<string>U32_20</string>
+						<key>UsbConnector</key>
+						<integer>0</integer>
+						<key>port</key>
 						<data>
 						BAAAAA==
 						</data>
-						<key>UsbConnector</key>
-						<integer>3</integer>
 					</dict>
 					<key>HS05</key>
 					<dict>
@@ -110,8 +114,10 @@
 						<data>
 						BwAAAA==
 						</data>
+						<key>Comment</key>
+						<string>U32_20</string>
 						<key>UsbConnector</key>
-						<integer>3</integer>
+						<integer>0</integer>
 					</dict>
 					<key>HS08</key>
 					<dict>
@@ -119,8 +125,10 @@
 						<data>
 						CAAAAA==
 						</data>
+						<key>Comment</key>
+						<string>U32_20</string>
 						<key>UsbConnector</key>
-						<integer>3</integer>
+						<integer>0</integer>
 					</dict>
 					<key>HS09</key>
 					<dict>
@@ -165,7 +173,7 @@
 						<key>Comment</key>
 						<string>F_USB1</string>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>255</integer>
 						<key>port</key>
 						<data>
 						DQAAAA==
