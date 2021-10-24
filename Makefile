@@ -46,13 +46,18 @@ gathering_files: clean
 	cp -r $(tmp_dir)/LucyRTL8125Ethernet-V1.1.0/Release/LucyRTL8125Ethernet.kext $(kext_dir)/
 	cp $(tmp_dir)/*.aml $(acpi_dir)/
 
+gui:
+	cp -Rv submodules/OcBinaryData/Resources EFI/OC
+
 clean:
 	ls -rtd $(tmp_dir)/* | grep -vw -E '.gitkeep|OpenCore' | xargs rm -rf
 
 clean_base: clean
 	rm -rf $(tmp_dir)/OpenCore
+	rm -f $(tmp_dir)/OpenCore.zip
 	rm -rf EFI/BOOT
-	ls -rtd EFI/OC/* | grep -vw -E 'config.plist' | xargs rm -rf
+	ls -rtd EFI/OC/* | grep -vw -E 'config.plist|Kexts' | xargs rm -rf
+	ls -rtd EFI/OC/Kexts/* | grep -vw -E 'USBMap.kext' | xargs rm -rf
 
 clean_log:
 	rm -rf ./opencore-*.txt

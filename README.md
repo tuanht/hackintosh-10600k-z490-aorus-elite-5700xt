@@ -26,6 +26,6 @@ This repo is for versioning bootloader in my hackintosh machine included: binari
 - Magic Mouse 2 & BeatsX Wireless Earphones. Sometime they become laggy a bit. It may related to antenna positioned at the back of computer case.
 
 Limitations:
-- If I turn-off bluetooth, the next restart will not work. Trying re-enable will work on the next restart
+- If I turn-off bluetooth, the next restart it will not work. Trying re-enable will work after the next restart
 - Can't connect Filco Minila-R keyboard via bluetooth. I always have connect issue with this keyboard even on real Mac
 

@@ -1,8 +1,15 @@
-EFI/BOOT/*
-EFI/OC/*
+EFI/BOOT
+EFI/OC/OpenCore.efi
+EFI/OC/ACPI
+EFI/OC/Drivers
+EFI/OC/Tools
+EFI/OC/Kexts/*
+!EFI/OC/Kexts/USBMap.kext
+EFI/OC/Resources
 !tmp/.gitkeep
 tmp
 opencore-*.txt
 .Spotlight-V100
 .Trashes
 .fseventsd
+
