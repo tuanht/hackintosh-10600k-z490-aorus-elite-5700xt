@@ -49,6 +49,9 @@ gathering_files: clean
 gui:
 	cp -Rv submodules/OcBinaryData/Resources EFI/OC
 
+utils:
+	cp -Rv tmp/OpenCore/Utilities/CreateVault Utilities
+
 clean:
 	ls -rtd $(tmp_dir)/* | grep -vw -E '.gitkeep|OpenCore' | xargs rm -rf
 
