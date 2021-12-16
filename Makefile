@@ -14,6 +14,7 @@ version_nvmefix = 1.0.9
 version_usbinjectall = 0.7.6
 
 download_oc:
+	[ -d "./$(tmp_dir)" ] && mkdir ./$(tmp_dir)
 	curl -o $(tmp_dir)/OpenCore.zip -L "https://github.com/acidanthera/OpenCorePkg/releases/download/$(version_opencore)/OpenCore-$(version_opencore)-RELEASE.zip"
 	cd $(tmp_dir) && mkdir OpenCore && unzip OpenCore.zip -d OpenCore
 
@@ -46,20 +47,25 @@ gathering_files: clean
 	cp -r $(tmp_dir)/LucyRTL8125Ethernet-V1.1.0/Release/LucyRTL8125Ethernet.kext $(kext_dir)/
 	cp $(tmp_dir)/*.aml $(acpi_dir)/
 
+install: base gathering_files
+
+install_usb:
+	cp EFI/OC/config_no-debug.plist EFI/OC/config.plist
+
 gui:
 	cp -Rv submodules/OcBinaryData/Resources EFI/OC
 
 utils:
 	cp -Rv tmp/OpenCore/Utilities/CreateVault Utilities
 
-clean:
+clean: clean_log
 	ls -rtd $(tmp_dir)/* | grep -vw -E '.gitkeep|OpenCore' | xargs rm -rf
 
 clean_base: clean
 	rm -rf $(tmp_dir)/OpenCore
 	rm -f $(tmp_dir)/OpenCore.zip
 	rm -rf EFI/BOOT
-	ls -rtd EFI/OC/* | grep -vw -E 'config.plist|Kexts' | xargs rm -rf
+	ls -rtd EFI/OC/* | grep -vw -E 'config.plist|config_no-debug.plist|Kexts' | xargs rm -rf
 	ls -rtd EFI/OC/Kexts/* | grep -vw -E 'USBMap.kext' | xargs rm -rf
 
 clean_log:
