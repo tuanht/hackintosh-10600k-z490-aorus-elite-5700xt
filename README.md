@@ -28,6 +28,15 @@ This repo is for versioning bootloader in my hackintosh machine included: binari
 Limitations:
 - After wakeup from sleep, Bluetooth service are freeze for few minutes, and system become unstable: can crash, unable to shutdown...
 
+## Cloning
+
+```shell
+# git init
+# git remote add origin git@github.com:tuanht/hackintosh-10600k-z490-aorus-elite-5700xt.git .
+# git pull --set-upstream origin master
+# git submodule update --init --recursive
+```
+
 ## Install
 
 Just type `make install` to download OpenCore and ACPI/drivers/kexts... need to boot OS.
@@ -36,7 +45,7 @@ Just type `make install` to download OpenCore and ACPI/drivers/kexts... need to 
 
 Type `make clean` to cleanup any downloaded files to make your EFI folder structure look clean.
 
-## Bootable USB Installer
+## Bootable USB Installer (WIP)
 
 If you're install EFI for USB Installer, you'll want to display console messages during boot for troubleshooting. I've make a special target that can run after install to enable verbose mode in `config.plist`, just run: `make install_usb`.
 

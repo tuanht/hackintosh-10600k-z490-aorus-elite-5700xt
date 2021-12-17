@@ -47,7 +47,7 @@ gathering_files: clean
 	cp -r $(tmp_dir)/LucyRTL8125Ethernet-V1.1.0/Release/LucyRTL8125Ethernet.kext $(kext_dir)/
 	cp $(tmp_dir)/*.aml $(acpi_dir)/
 
-install: base gathering_files
+install: base gathering_files gui
 
 install_usb:
 	cp EFI/OC/config_no-debug.plist EFI/OC/config.plist
