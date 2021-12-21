@@ -23,7 +23,8 @@ This repo is for versioning bootloader on my hackintosh computer including: bina
 - CPU virtualization with Docker
 - Front & rear USB ports using tool from [corpnewt/USBMap](https://github.com/corpnewt/USBMap) (some ports can't map as 2.0 cause reach 15 ports limit)
 - Bluetooth (after USBMap)
-- Magic Mouse 2 & BeatsX Wireless Earphones. Sometime they become laggy a bit. It may related to antenna positioned at the back of computer case.
+- Magic Mouse 2 & BeatsX Wireless Earphones
+- TRIM support out-of-box
 
 Limitations:
 - After wakeup from sleep, Bluetooth service are freeze for few minutes, and system become unstable: can crash, unable to shutdown...
@@ -31,10 +32,10 @@ Limitations:
 ## Cloning
 
 ```shell
-# git init
-# git remote add origin git@github.com:tuanht/hackintosh-10600k-z490-aorus-elite-5700xt.git .
-# git pull --set-upstream origin master
-# git submodule update --init --recursive
+git init
+git remote add origin git@github.com:tuanht/hackintosh-10600k-z490-aorus-elite-5700xt.git .
+git pull --set-upstream origin master
+git submodule update --init --recursive
 ```
 
 ## Install
