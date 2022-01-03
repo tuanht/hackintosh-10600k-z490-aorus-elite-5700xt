@@ -44,7 +44,6 @@ gathering_files: clean
 	cp -r $(tmp_dir)/AppleALC/AppleALC.kext $(kext_dir)/
 	cp -r $(tmp_dir)/NVMeFix/NVMeFix.kext $(kext_dir)/
 	cp -r $(tmp_dir)/CtlnaAHCIPort.kext $(kext_dir)/
-	cp -r $(tmp_dir)/LucyRTL8125Ethernet-V1.1.0/Release/LucyRTL8125Ethernet.kext $(kext_dir)/
 	cp $(tmp_dir)/*.aml $(acpi_dir)/
 
 install: base gathering_files gui
@@ -66,7 +65,7 @@ clean_base: clean
 	rm -f $(tmp_dir)/OpenCore.zip
 	rm -rf EFI/BOOT
 	ls -rtd EFI/OC/* | grep -vw -E 'config.plist|config_no-debug.plist|Kexts' | xargs rm -rf
-	ls -rtd EFI/OC/Kexts/* | grep -vw -E 'USBMap.kext' | xargs rm -rf
+	ls -rtd EFI/OC/Kexts/* | grep -vw -E 'USBMap.kext|LucyRTL8125Ethernet.kext' | xargs rm -rf
 
 clean_log:
 	rm -rf ./opencore-*.txt

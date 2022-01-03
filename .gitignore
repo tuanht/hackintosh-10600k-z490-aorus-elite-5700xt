@@ -5,6 +5,7 @@ EFI/OC/Drivers
 EFI/OC/Tools
 EFI/OC/Kexts/*
 !EFI/OC/Kexts/USBMap.kext
+!EFI/OC/Kexts/LucyRTL8125Ethernet.kext
 EFI/OC/Resources
 Utilities/*
 !tmp/.gitkeep
