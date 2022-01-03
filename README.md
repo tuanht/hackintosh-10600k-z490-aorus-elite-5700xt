@@ -1,5 +1,7 @@
 # My personal OpenCore EFI
 
+![](screenshots/2021-10-26.png)
+
 ## How I use this repo
 
 This repo is for versioning bootloader on my hackintosh computer including: binaries, kexts, config.plist.
