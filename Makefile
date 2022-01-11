@@ -1,6 +1,5 @@
 tmp_dir = tmp
 kext_dir = EFI/OC/Kexts
-acpi_dir = EFI/OC/ACPI
 
 drivers = OpenRuntime.efi|OpenCanopy.efi
 tools = OpenShell.efi
@@ -33,9 +32,6 @@ gathering_files: clean
 	cd $(tmp_dir) && curl -o NVMeFix.zip -L "https://github.com/acidanthera/NVMeFix/releases/download/$(version_nvmefix)/NVMeFix-$(version_nvmefix)-RELEASE.zip" && mkdir NVMeFix && unzip NVMeFix.zip -d NVMeFix
 	cd $(tmp_dir) && curl -o CtlnaAHCIPort.kext.zip -L "https://github.com/dortania/OpenCore-Install-Guide/raw/master/extra-files/CtlnaAHCIPort.kext.zip" && unzip CtlnaAHCIPort.kext.zip
 	unzip downloaded/LucyRTL8125Ethernet-V1.1.0.zip -d $(tmp_dir)
-	cd $(tmp_dir) && curl -o SSDT-PLUG-DRTNIA.aml -L "https://github.com/dortania/Getting-Started-With-ACPI/raw/master/extra-files/compiled/SSDT-PLUG-DRTNIA.aml"
-	cd $(tmp_dir) && curl -o SSDT-EC-USBX-DESKTOP.aml -L "https://github.com/dortania/Getting-Started-With-ACPI/raw/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml"
-	cd $(tmp_dir) && curl -o SSDT-AWAC.aml -L "https://github.com/dortania/Getting-Started-With-ACPI/raw/master/extra-files/compiled/SSDT-AWAC.aml"
 	cp -r $(tmp_dir)/VirtualSMC/Kexts/VirtualSMC.kext $(kext_dir)/
 	cp -r $(tmp_dir)/VirtualSMC/Kexts/SMCProcessor.kext $(kext_dir)/
 	cp -r $(tmp_dir)/VirtualSMC/Kexts/SMCSuperIO.kext $(kext_dir)/
@@ -44,7 +40,6 @@ gathering_files: clean
 	cp -r $(tmp_dir)/AppleALC/AppleALC.kext $(kext_dir)/
 	cp -r $(tmp_dir)/NVMeFix/NVMeFix.kext $(kext_dir)/
 	cp -r $(tmp_dir)/CtlnaAHCIPort.kext $(kext_dir)/
-	cp $(tmp_dir)/*.aml $(acpi_dir)/
 
 install: base gathering_files gui
 
@@ -64,7 +59,7 @@ clean_base: clean
 	rm -rf $(tmp_dir)/OpenCore
 	rm -f $(tmp_dir)/OpenCore.zip
 	rm -rf EFI/BOOT
-	ls -rtd EFI/OC/* | grep -vw -E 'config.plist|config_no-debug.plist|Kexts' | xargs rm -rf
+	ls -rtd EFI/OC/* | grep -vw -E 'config.plist|config_no-debug.plist|Kexts|ACPI' | xargs rm -rf
 	ls -rtd EFI/OC/Kexts/* | grep -vw -E 'USBMap.kext|LucyRTL8125Ethernet.kext' | xargs rm -rf
 
 clean_log:
