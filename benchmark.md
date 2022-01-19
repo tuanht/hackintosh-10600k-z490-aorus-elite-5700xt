@@ -1,4 +1,6 @@
-Here is the benchmark result using `XcodeBenchmark` to measures the compilation time compares to the other Mac systems.
+Here is the benchmark result using `XcodeBenchmark` to measures the compilation time.
+
+![](screenshots/2022-01-13.png)
 
 The other systems are cherry pick from [devMEremenko/XcodeBenchmark](https://github.com/devMEremenko/XcodeBenchmark).
 
