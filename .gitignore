@@ -1,6 +1,5 @@
 EFI/BOOT
 EFI/OC/OpenCore.efi
-EFI/OC/ACPI
 EFI/OC/Drivers
 EFI/OC/Tools
 EFI/OC/Kexts/*
