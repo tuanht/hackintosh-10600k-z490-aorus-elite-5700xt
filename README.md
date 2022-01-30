@@ -11,13 +11,15 @@ This repo is for versioning bootloader on my hackintosh computer including: bina
 
 ## Hardware specs
 
-- Intel Core i5 10600k
+- Intel Core ~~i5 10600k~~ i7 10700k
 - Gigabyte Z490 Aorus Elite
 - Gigabyte Aorus Radeon RX 5700XT 8G
 - WD_BLACK SN750 NVMe SSD 512GB
 - Audio Realtek ALC1200 codec
 - LAN Realtek 2.5GbE
 - Wifi Broadcom BCM943602CS
+- Noctua NH-U14S
+- NZXT H510
 
 ## What work
 
@@ -56,7 +58,7 @@ If you're install EFI for USB Installer, you'll want to display console messages
 
 ## Credits
 
-- [acidanthera/OpenCorePkg](https://github.com/acidanthera/OpenCorePkg)
+- [acidanthera](https://github.com/acidanthera)
 - [Dortania's OpenCore Install Guide](https://dortania-github-io.thrrip.space/OpenCore-Install-Guide/)
+- [corpnewt](https://github.com/corpnewt)
 - [LucyRTL8125Ethernet](https://www.insanelymac.com/forum/files/file/1004-lucyrtl8125ethernet/) by Mieze
-- [corpnewt/USBMap](https://github.com/corpnewt/USBMap)

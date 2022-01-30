@@ -4,16 +4,14 @@ kext_dir = EFI/OC/Kexts
 drivers = OpenRuntime.efi|OpenCanopy.efi
 tools = OpenShell.efi
 
-version_opencore = 0.7.4
-version_virtualsmc = 1.2.7
-version_lilu = 1.5.6
-version_whatevergreen = 1.5.4
+version_opencore = 0.7.7
+version_virtualsmc = 1.2.8
+version_lilu = 1.5.9
+version_whatevergreen = 1.5.6
 version_applealc = 1.6.5
 version_nvmefix = 1.0.9
-version_usbinjectall = 0.7.6
 
 download_oc:
-	[ -d "./$(tmp_dir)" ] && mkdir ./$(tmp_dir)
 	curl -o $(tmp_dir)/OpenCore.zip -L "https://github.com/acidanthera/OpenCorePkg/releases/download/$(version_opencore)/OpenCore-$(version_opencore)-RELEASE.zip"
 	cd $(tmp_dir) && mkdir OpenCore && unzip OpenCore.zip -d OpenCore
 
