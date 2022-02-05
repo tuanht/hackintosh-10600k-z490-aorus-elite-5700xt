@@ -28,7 +28,6 @@ gathering_files: clean
 	cd $(tmp_dir) && curl -o WhateverGreen.zip -L "https://github.com/acidanthera/WhateverGreen/releases/download/$(version_whatevergreen)/WhateverGreen-$(version_whatevergreen)-RELEASE.zip" && mkdir WhateverGreen && unzip WhateverGreen.zip -d WhateverGreen
 	cd $(tmp_dir) && curl -o AppleALC.zip -L "https://github.com/acidanthera/AppleALC/releases/download/$(version_applealc)/AppleALC-$(version_applealc)-RELEASE.zip" && mkdir AppleALC && unzip AppleALC.zip -d AppleALC
 	cd $(tmp_dir) && curl -o NVMeFix.zip -L "https://github.com/acidanthera/NVMeFix/releases/download/$(version_nvmefix)/NVMeFix-$(version_nvmefix)-RELEASE.zip" && mkdir NVMeFix && unzip NVMeFix.zip -d NVMeFix
-	unzip downloaded/LucyRTL8125Ethernet-V1.1.0.zip -d $(tmp_dir)
 	cp -r $(tmp_dir)/VirtualSMC/Kexts/VirtualSMC.kext $(kext_dir)/
 	cp -r $(tmp_dir)/VirtualSMC/Kexts/SMCProcessor.kext $(kext_dir)/
 	cp -r $(tmp_dir)/VirtualSMC/Kexts/SMCSuperIO.kext $(kext_dir)/

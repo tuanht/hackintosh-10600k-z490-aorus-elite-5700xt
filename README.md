@@ -44,7 +44,7 @@ git submodule update --init --recursive
 
 ## Install
 
-Just type `make install` to download OpenCore and ACPI/drivers/kexts... need to boot OS.
+Just type `make install` to download OpenCore and ACPI/drivers/kexts for configured version.
 
 ## Cleanup
 
@@ -53,8 +53,6 @@ Type `make clean` to cleanup any downloaded files to make your EFI folder struct
 ## Bootable USB Installer (WIP)
 
 If you're install EFI for USB Installer, you'll want to display console messages during boot for troubleshooting. I've make a special target that can run after install to enable verbose mode in `config.plist`, just run: `make install_usb`.
-
-## Upgrade
 
 ## Credits
 
