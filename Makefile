@@ -4,16 +4,14 @@ kext_dir = EFI/OC/Kexts
 drivers = OpenRuntime.efi|OpenCanopy.efi
 tools = OpenShell.efi
 
-version_opencore = 0.7.4
-version_virtualsmc = 1.2.7
-version_lilu = 1.5.6
-version_whatevergreen = 1.5.4
+version_opencore = 0.7.7
+version_virtualsmc = 1.2.8
+version_lilu = 1.5.9
+version_whatevergreen = 1.5.6
 version_applealc = 1.6.5
 version_nvmefix = 1.0.9
-version_usbinjectall = 0.7.6
 
 download_oc:
-	[ -d "./$(tmp_dir)" ] && mkdir ./$(tmp_dir)
 	curl -o $(tmp_dir)/OpenCore.zip -L "https://github.com/acidanthera/OpenCorePkg/releases/download/$(version_opencore)/OpenCore-$(version_opencore)-RELEASE.zip"
 	cd $(tmp_dir) && mkdir OpenCore && unzip OpenCore.zip -d OpenCore
 
@@ -30,7 +28,6 @@ gathering_files: clean
 	cd $(tmp_dir) && curl -o WhateverGreen.zip -L "https://github.com/acidanthera/WhateverGreen/releases/download/$(version_whatevergreen)/WhateverGreen-$(version_whatevergreen)-RELEASE.zip" && mkdir WhateverGreen && unzip WhateverGreen.zip -d WhateverGreen
 	cd $(tmp_dir) && curl -o AppleALC.zip -L "https://github.com/acidanthera/AppleALC/releases/download/$(version_applealc)/AppleALC-$(version_applealc)-RELEASE.zip" && mkdir AppleALC && unzip AppleALC.zip -d AppleALC
 	cd $(tmp_dir) && curl -o NVMeFix.zip -L "https://github.com/acidanthera/NVMeFix/releases/download/$(version_nvmefix)/NVMeFix-$(version_nvmefix)-RELEASE.zip" && mkdir NVMeFix && unzip NVMeFix.zip -d NVMeFix
-	unzip downloaded/LucyRTL8125Ethernet-V1.1.0.zip -d $(tmp_dir)
 	cp -r $(tmp_dir)/VirtualSMC/Kexts/VirtualSMC.kext $(kext_dir)/
 	cp -r $(tmp_dir)/VirtualSMC/Kexts/SMCProcessor.kext $(kext_dir)/
 	cp -r $(tmp_dir)/VirtualSMC/Kexts/SMCSuperIO.kext $(kext_dir)/
