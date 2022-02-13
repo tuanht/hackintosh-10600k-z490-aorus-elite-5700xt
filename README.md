@@ -11,13 +11,16 @@ This repo is for versioning bootloader on my hackintosh computer including: bina
 
 ## Hardware specs
 
-- Intel Core i5 10600k
+- Intel Core ~~i5 10600k~~ i7 10700k
 - Gigabyte Z490 Aorus Elite
+- G.SKILL Ripjaws V DDR4 3000MHz 4x8GB
 - Gigabyte Aorus Radeon RX 5700XT 8G
 - WD_BLACK SN750 NVMe SSD 512GB
 - Audio Realtek ALC1200 codec
 - LAN Realtek 2.5GbE
 - Wifi Broadcom BCM943602CS
+- Noctua NH-U14S
+- NZXT H510
 
 ## What work
 
@@ -27,6 +30,7 @@ This repo is for versioning bootloader on my hackintosh computer including: bina
 - Bluetooth (after USBMap)
 - Magic Mouse 2 & BeatsX Wireless Earphones
 - TRIM support out-of-box
+- GPU temperature sensors (read through iStat Menus)
 
 Limitations:
 - After wakeup from sleep, Bluetooth service are freeze for few minutes, and system become unstable: can crash, unable to shutdown...
@@ -42,7 +46,7 @@ git submodule update --init --recursive
 
 ## Install
 
-Just type `make install` to download OpenCore and ACPI/drivers/kexts... need to boot OS.
+Just type `make install` to download OpenCore and ACPI/drivers/kexts for configured version.
 
 ## Cleanup
 
@@ -52,11 +56,9 @@ Type `make clean` to cleanup any downloaded files to make your EFI folder struct
 
 If you're install EFI for USB Installer, you'll want to display console messages during boot for troubleshooting. I've make a special target that can run after install to enable verbose mode in `config.plist`, just run: `make install_usb`.
 
-## Upgrade
-
 ## Credits
 
-- [acidanthera/OpenCorePkg](https://github.com/acidanthera/OpenCorePkg)
+- [acidanthera](https://github.com/acidanthera)
 - [Dortania's OpenCore Install Guide](https://dortania-github-io.thrrip.space/OpenCore-Install-Guide/)
+- [corpnewt](https://github.com/corpnewt)
 - [LucyRTL8125Ethernet](https://www.insanelymac.com/forum/files/file/1004-lucyrtl8125ethernet/) by Mieze
-- [corpnewt/USBMap](https://github.com/corpnewt/USBMap)
