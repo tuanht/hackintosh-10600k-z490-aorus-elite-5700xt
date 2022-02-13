@@ -13,6 +13,7 @@ This repo is for versioning bootloader on my hackintosh computer including: bina
 
 - Intel Core ~~i5 10600k~~ i7 10700k
 - Gigabyte Z490 Aorus Elite
+- G.SKILL Ripjaws V DDR4 3000MHz 4x8GB
 - Gigabyte Aorus Radeon RX 5700XT 8G
 - WD_BLACK SN750 NVMe SSD 512GB
 - Audio Realtek ALC1200 codec
@@ -29,6 +30,7 @@ This repo is for versioning bootloader on my hackintosh computer including: bina
 - Bluetooth (after USBMap)
 - Magic Mouse 2 & BeatsX Wireless Earphones
 - TRIM support out-of-box
+- GPU temperature sensors (read through iStat Menus)
 
 Limitations:
 - After wakeup from sleep, Bluetooth service are freeze for few minutes, and system become unstable: can crash, unable to shutdown...

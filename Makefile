@@ -10,6 +10,7 @@ version_lilu = 1.5.9
 version_whatevergreen = 1.5.6
 version_applealc = 1.6.5
 version_nvmefix = 1.0.9
+version_radeonsensor = 0.3.1
 
 download_oc:
 	curl -o $(tmp_dir)/OpenCore.zip -L "https://github.com/acidanthera/OpenCorePkg/releases/download/$(version_opencore)/OpenCore-$(version_opencore)-RELEASE.zip"
@@ -28,6 +29,7 @@ gathering_files: clean
 	cd $(tmp_dir) && curl -o WhateverGreen.zip -L "https://github.com/acidanthera/WhateverGreen/releases/download/$(version_whatevergreen)/WhateverGreen-$(version_whatevergreen)-RELEASE.zip" && mkdir WhateverGreen && unzip WhateverGreen.zip -d WhateverGreen
 	cd $(tmp_dir) && curl -o AppleALC.zip -L "https://github.com/acidanthera/AppleALC/releases/download/$(version_applealc)/AppleALC-$(version_applealc)-RELEASE.zip" && mkdir AppleALC && unzip AppleALC.zip -d AppleALC
 	cd $(tmp_dir) && curl -o NVMeFix.zip -L "https://github.com/acidanthera/NVMeFix/releases/download/$(version_nvmefix)/NVMeFix-$(version_nvmefix)-RELEASE.zip" && mkdir NVMeFix && unzip NVMeFix.zip -d NVMeFix
+	cd $(tmp_dir) && curl -o RadeonSensor.zip -L "https://github.com/aluveitie/RadeonSensor/releases/download/$(version_radeonsensor)/RadeonSensor-$(version_radeonsensor).zip" && mkdir RadeonSensor && unzip RadeonSensor.zip -d RadeonSensor
 	cp -r $(tmp_dir)/VirtualSMC/Kexts/VirtualSMC.kext $(kext_dir)/
 	cp -r $(tmp_dir)/VirtualSMC/Kexts/SMCProcessor.kext $(kext_dir)/
 	cp -r $(tmp_dir)/VirtualSMC/Kexts/SMCSuperIO.kext $(kext_dir)/
@@ -35,6 +37,7 @@ gathering_files: clean
 	cp -r $(tmp_dir)/WhateverGreen/WhateverGreen.kext $(kext_dir)/
 	cp -r $(tmp_dir)/AppleALC/AppleALC.kext $(kext_dir)/
 	cp -r $(tmp_dir)/NVMeFix/NVMeFix.kext $(kext_dir)/
+	cp -r $(tmp_dir)/RadeonSensor/*.kext $(kext_dir)/
 
 install: base gathering_files gui
 
