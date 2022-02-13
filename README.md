@@ -62,3 +62,4 @@ If you're install EFI for USB Installer, you'll want to display console messages
 - [Dortania's OpenCore Install Guide](https://dortania-github-io.thrrip.space/OpenCore-Install-Guide/)
 - [corpnewt](https://github.com/corpnewt)
 - [LucyRTL8125Ethernet](https://www.insanelymac.com/forum/files/file/1004-lucyrtl8125ethernet/) by Mieze
+- [aluveitie's RadeonSensor](https://github.com/aluveitie/RadeonSensor)
