@@ -4,7 +4,7 @@
 
 ## How I use this repo
 
-This repo is for versioning bootloader on my hackintosh computer including: binaries, kexts, config.plist.
+This repo is for versioning bootloader on my Hackintosh computer including binaries, kexts, config.plist.
 
 - Issues relating to macOS, OpenCore: [Issues](https://github.com/tuanht/hackintosh-10600k-z490-aorus-elite-5700xt/issues)
 - Knowledge: [Wiki](https://github.com/tuanht/hackintosh-10600k-z490-aorus-elite-5700xt/wiki)
@@ -22,9 +22,9 @@ This repo is for versioning bootloader on my hackintosh computer including: bina
 - Noctua NH-U14S
 - NZXT H510
 
-## What work
+## What works
 
-- Wifi run perfectly without inject any kexts
+- Wifi runs perfectly without injecting any kexts
 - CPU virtualization with Docker
 - Front & rear USB ports using tool from [corpnewt/USBMap](https://github.com/corpnewt/USBMap) (some ports can't map as 2.0 cause reach 15 ports limit)
 - Bluetooth (after USBMap)
@@ -33,7 +33,7 @@ This repo is for versioning bootloader on my hackintosh computer including: bina
 - GPU temperature sensors (read through iStat Menus)
 
 Limitations:
-- After wakeup from sleep, Bluetooth service are freeze for few minutes, and system become unstable: can crash, unable to shutdown...
+- After wakeup from sleep, Bluetooth services are frozen for a few minutes, and the system becomes unstable: can crash, unable to shut down...
 
 ## Cloning
 
@@ -50,11 +50,15 @@ Just type `make install` to download OpenCore and ACPI/drivers/kexts for configu
 
 ## Cleanup
 
-Type `make clean` to cleanup any downloaded files to make your EFI folder structure look clean.
+Type `make clean` to clean up any downloaded files to make your EFI folder structure look clean.
 
 ## Bootable USB Installer (WIP)
 
-If you're install EFI for USB Installer, you'll want to display console messages during boot for troubleshooting. I've make a special target that can run after install to enable verbose mode in `config.plist`, just run: `make install_usb`.
+If you're installing EFI for USB Installer, you'll want to display console messages during boot for troubleshooting. I've made a special target that can run after install to enable verbose mode in `config.plist`, just run: `make install_usb`.
+
+## Disclaimer
+
+This OC build is made specifically for my system. Don't use it unless you understand which configurations need to be changed to suit your need. Checkout [merged PRs](https://github.com/tuanht/hackintosh-10600k-z490-aorus-elite-5700xt/pulls?q=is%3Apr+is%3Amerged) for some important changes.
 
 ## Credits
 
