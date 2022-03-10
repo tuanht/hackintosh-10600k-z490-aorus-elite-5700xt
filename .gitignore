@@ -10,6 +10,8 @@ Utilities/*
 !tmp/.gitkeep
 tmp
 opencore-*.txt
+oc*_mac*.tar.gz
+oc*_mac*.zip
 .Spotlight-V100
 .Trashes
 .fseventsd

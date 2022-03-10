@@ -62,3 +62,7 @@ clean_base: clean
 
 clean_log:
 	rm -rf ./opencore-*.txt
+
+package:
+	tar -czvf oc$(version_opencore)_mac`sw_vers -productVersion`.tar.gz EFI/
+	zip -r oc$(version_opencore)_mac`sw_vers -productVersion`.zip EFI/
