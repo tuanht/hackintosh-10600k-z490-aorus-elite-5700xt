@@ -4,15 +4,17 @@ kext_dir = EFI/OC/Kexts
 drivers = OpenRuntime.efi|OpenCanopy.efi
 tools = OpenShell.efi
 
-version_opencore = 0.7.7
-version_virtualsmc = 1.2.8
-version_lilu = 1.5.9
-version_whatevergreen = 1.5.6
+version_opencore = 0.7.9
+version_virtualsmc = 1.2.9
+version_lilu = 1.6.0
+version_whatevergreen = 1.5.8
 version_applealc = 1.6.5
 version_nvmefix = 1.0.9
 version_radeonsensor = 0.3.1
 
 download_oc:
+	-rm $(tmp_dir)/OpenCore.zip
+	-rm -rf $(tmp_dir)/OpenCore/
 	curl -o $(tmp_dir)/OpenCore.zip -L "https://github.com/acidanthera/OpenCorePkg/releases/download/$(version_opencore)/OpenCore-$(version_opencore)-RELEASE.zip"
 	cd $(tmp_dir) && mkdir OpenCore && unzip OpenCore.zip -d OpenCore
 
@@ -54,10 +56,8 @@ clean: clean_log
 	ls -rtd $(tmp_dir)/* | grep -vw -E '.gitkeep|OpenCore' | xargs rm -rf
 
 clean_base: clean
-	rm -rf $(tmp_dir)/OpenCore
-	rm -f $(tmp_dir)/OpenCore.zip
 	rm -rf EFI/BOOT
-	ls -rtd EFI/OC/* | grep -vw -E 'config.plist|config_no-debug.plist|Kexts|ACPI' | xargs rm -rf
+	ls -rtd EFI/OC/* | grep -vw -E 'config.plist|Kexts|ACPI' | xargs rm -rf
 	ls -rtd EFI/OC/Kexts/* | grep -vw -E 'USBMap.kext|LucyRTL8125Ethernet.kext' | xargs rm -rf
 
 clean_log:
