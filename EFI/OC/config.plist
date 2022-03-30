@@ -263,6 +263,17 @@
 				<key>acpi-wake-type</key>
 				<data>AQ==</data>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>@0,name</key>
+				<string>ATY,Adder</string>
+				<key>@1,name</key>
+				<string>ATY,Adder</string>
+				<key>@2,name</key>
+				<string>ATY,Adder</string>
+				<key>@3,name</key>
+				<string>ATY,Adder</string>
+			</dict>
 		</dict>
 		<key>Delete</key>
 		<dict/>
@@ -485,6 +496,8 @@
 				<string></string>
 				<key>MinKernel</key>
 				<string></string>
+				<key>Strategy</key>
+				<string>Disable</string>
 			</dict>
 		</array>
 		<key>Emulate</key>
@@ -842,6 +855,8 @@
 			<false/>
 			<key>Target</key>
 			<integer>3</integer>
+			<key>LogModules</key>
+			<string>*</string>
 		</dict>
 		<key>Entries</key>
 		<array>
