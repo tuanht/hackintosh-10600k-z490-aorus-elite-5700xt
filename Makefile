@@ -1,7 +1,7 @@
 tmp_dir = tmp
 kext_dir = EFI/OC/Kexts
 
-drivers = OpenRuntime.efi|OpenCanopy.efi
+drivers = OpenRuntime.efi|OpenCanopy.efi|OpenLinuxBoot.efi
 tools = OpenShell.efi
 
 version_opencore = 0.7.9
@@ -26,6 +26,7 @@ base: clean_base download_oc
 
 gathering_files: clean
 	curl -o EFI/OC/Drivers/HfsPlus.efi -L "https://github.com/acidanthera/OcBinaryData/raw/master/Drivers/HfsPlus.efi"
+	curl -o EFI/OC/Drivers/ext4_x64.efi -L "https://github.com/acidanthera/OcBinaryData/raw/master/Drivers/ext4_x64.efi"
 	cd $(tmp_dir) && curl -o VirtualSMC.zip -L "https://github.com/acidanthera/VirtualSMC/releases/download/$(version_virtualsmc)/VirtualSMC-$(version_virtualsmc)-RELEASE.zip" && mkdir VirtualSMC && unzip VirtualSMC.zip -d VirtualSMC
 	cd $(tmp_dir) && curl -o Lilu.zip -L "https://github.com/acidanthera/Lilu/releases/download/$(version_lilu)/Lilu-$(version_lilu)-RELEASE.zip" && mkdir Lilu && unzip Lilu.zip -d Lilu
 	cd $(tmp_dir) && curl -o WhateverGreen.zip -L "https://github.com/acidanthera/WhateverGreen/releases/download/$(version_whatevergreen)/WhateverGreen-$(version_whatevergreen)-RELEASE.zip" && mkdir WhateverGreen && unzip WhateverGreen.zip -d WhateverGreen
