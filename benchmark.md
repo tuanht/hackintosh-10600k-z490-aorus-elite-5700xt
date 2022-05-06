@@ -6,14 +6,15 @@ The other systems are cherry pick from [devMEremenko/XcodeBenchmark](https://git
 
 ## Xcode 13
 
-|        Device        |              CPU               | RAM | SSD | HDD | Xcode |  macOS  | Time(sec) |
-|:--------------------:|:------------------------------:|:---:|:---:|:---:|:-----:|:-------:|:---------:|
-| MacBook Pro 14" 2021 |            M1 Max 10-core      |  32 | 2TB |     |  13.1 | 12.0.1  |     90    |
-| MacBook Pro 16" 2021 |            M1 Pro 10-core      |  16 | 1TB |     |  13.1 | 12.0.1  |    102    |
-| MacBook Pro 14" 2021 |            M1 Pro 8-core       |  16 | 512 |     |  13.1 | 12.0.1  |    109    |
-| MacBook Pro 13" 2020 |            M1 8-core           |  16 | 1TB |     |  13.1 | 12.0.1  |    130    |
-| _**My Hackintosh**_  | _**i5-10600k 4.1 Ghz 6-core**_ |  32 | 512 |     |  13.1 | 12.1    |    174    |
-| MacBook Pro 16" 2019 |           i9 2.4 GHz 8-core    |  64 | 1TB |     |  13.1 | 12.0.1  |    212    |
+|            Device            |              CPU               | RAM | SSD | HDD | Xcode   |  macOS  | Time(sec) |
+|:----------------------------:|:------------------------------:|:---:|:---:|:---:|:-------:|:-------:|:---------:|
+| MacBook Pro 14" 2021         |            M1 Max 10-core      |  32 | 2TB |     |  13.1   | 12.0.1  |     90    |
+| MacBook Pro 16" 2021         |            M1 Pro 10-core      |  16 | 1TB |     |  13.1   | 12.0.1  |    102    |
+| MacBook Pro 14" 2021         |            M1 Pro 8-core       |  16 | 512 |     |  13.1   | 12.0.1  |    109    |
+| MacBook Pro 13" 2020         |            M1 8-core           |  16 | 1TB |     |  13.1   | 12.0.1  |    130    |
+| _**My Upgraded Hackintosh**_ | _**i7-10700k 3.8 Ghz 8-core**_ |  32 | 512 |     |  13.3.1 | 12.3.1  |    133    |
+| _**My Hackintosh**_          | _**i5-10600k 4.1 Ghz 6-core**_ |  32 | 512 |     |  13.1   | 12.1    |    174    |
+| MacBook Pro 16" 2019         |           i9 2.4 GHz 8-core    |  64 | 1TB |     |  13.1   | 12.0.1  |    212    |
 
 ## Xcode 12
 
