@@ -4,13 +4,13 @@ kext_dir = EFI/OC/Kexts
 drivers = OpenRuntime.efi|OpenCanopy.efi|OpenLinuxBoot.efi
 tools = OpenShell.efi
 
-version_opencore = 0.8.0
-version_virtualsmc = 1.2.9
-version_lilu = 1.6.0
-version_whatevergreen = 1.5.8
-version_applealc = 1.6.5
-version_nvmefix = 1.0.9
-version_radeonsensor = 0.3.1
+version_opencore = 0.8.3
+version_virtualsmc = 1.3.0# https://github.com/acidanthera/VirtualSMC/releases
+version_lilu = 1.6.2# https://github.com/acidanthera/Lilu/releases
+version_whatevergreen = 1.6.1# https://github.com/acidanthera/WhateverGreen/releases
+version_applealc = 1.7.4# https://github.com/acidanthera/AppleALC/releases
+version_nvmefix = 1.1.0# https://github.com/acidanthera/NVMeFix/releases
+version_radeonsensor = 0.3.1# https://github.com/aluveitie/RadeonSensor/releases
 
 download_oc:
 	-rm $(tmp_dir)/OpenCore.zip

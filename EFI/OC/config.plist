@@ -1146,6 +1146,8 @@
 			<dict>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>HfsPlus.efi</string>
 				<key>Arguments</key>
@@ -1156,6 +1158,8 @@
 			<dict>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>OpenCanopy.efi</string>
 				<key>Arguments</key>
@@ -1166,6 +1170,8 @@
 			<dict>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>OpenRuntime.efi</string>
 				<key>Arguments</key>
@@ -1176,6 +1182,8 @@
 			<dict>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>ext4_x64.efi</string>
 				<key>Arguments</key>
@@ -1186,6 +1194,8 @@
 			<dict>
 				<key>Enabled</key>
 				<true/>
+				<key>LoadEarly</key>
+				<false/>
 				<key>Path</key>
 				<string>OpenLinuxBoot.efi</string>
 				<key>Arguments</key>
