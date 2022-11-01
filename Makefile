@@ -4,7 +4,7 @@ kext_dir = EFI/OC/Kexts
 drivers = OpenRuntime.efi|OpenCanopy.efi|OpenLinuxBoot.efi
 tools = OpenShell.efi
 
-version_opencore = 0.8.3
+version_opencore = 0.8.5
 version_virtualsmc = 1.3.0# https://github.com/acidanthera/VirtualSMC/releases
 version_lilu = 1.6.2# https://github.com/acidanthera/Lilu/releases
 version_whatevergreen = 1.6.1# https://github.com/acidanthera/WhateverGreen/releases
